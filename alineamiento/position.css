@@ -1,0 +1,60 @@
+:root {
+  --box-size: 180px;
+  --element-size: 60px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  height: var(--box-size);
+  position: relative;
+}
+
+.element {
+  width: var(--element-size);
+  height: var(--element-size);
+  position: absolute;
+}
+
+.box:nth-child(1) .element {
+  top: 0;
+  left: 0;
+}
+.box:nth-child(2) .element {
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.box:nth-child(3) .element {
+  left: 0;
+  bottom: 0;
+}
+.box:nth-child(4) .element {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.box:nth-child(5) .element {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.box:nth-child(6) .element {
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
+.box:nth-child(7) .element {
+  right: 0;
+}
+.box:nth-child(8) .element {
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.box:nth-child(9) .element {
+  right: 0;
+  bottom: 0;
+}
