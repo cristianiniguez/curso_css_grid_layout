@@ -1,0 +1,50 @@
+:root {
+  --box-size: 180px;
+  --element-size: 60px;
+  --center-element-top-margin: calc(
+    var(--box-size) / 2 - var(--element-size) / 2
+  );
+  --bottom-element-top-margin: calc(var(--box-size) - var(--element-size));
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  height: var(--box-size);
+}
+
+.element {
+  width: var(--element-size);
+  height: var(--element-size);
+}
+
+.box:nth-child(1) .element {
+  margin: 0;
+}
+.box:nth-child(2) .element {
+  margin: var(--center-element-top-margin) 0;
+}
+.box:nth-child(3) .element {
+  margin: var(--bottom-element-top-margin) 0;
+}
+.box:nth-child(4) .element {
+  margin: 0 auto;
+}
+.box:nth-child(5) .element {
+  margin: var(--center-element-top-margin) auto;
+}
+.box:nth-child(6) .element {
+  margin: var(--bottom-element-top-margin) auto;
+}
+.box:nth-child(7) .element {
+  margin: 0 0 0 auto;
+}
+.box:nth-child(8) .element {
+  margin: var(--center-element-top-margin) 0 0 auto;
+}
+.box:nth-child(9) .element {
+  margin: var(--bottom-element-top-margin) 0 0 auto;
+}

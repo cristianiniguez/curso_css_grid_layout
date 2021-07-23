@@ -1,0 +1,49 @@
+:root {
+  --box-size: 180px;
+  --element-size: 60px;
+  --lines: 2;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.1em; /* para que todos los textos ocupen dos líneas */
+}
+
+.box {
+  height: var(--box-size);
+  line-height: var(--box-size);
+}
+
+.element {
+  width: var(--element-size);
+  height: var(--element-size);
+  display: inline-block;
+  line-height: calc(var(--element-size) / var(--lines));
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+  text-align: left;
+}
+.box:nth-child(4),
+.box:nth-child(5),
+.box:nth-child(6) {
+  text-align: center;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+  text-align: right;
+}
+
+.box:nth-child(3n + 1) .element {
+  vertical-align: top;
+}
+.box:nth-child(3n + 2) .element {
+  vertical-align: middle;
+}
+.box:nth-child(3n + 3) .element {
+  vertical-align: bottom;
+}
