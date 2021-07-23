@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso de CSS Grid Layout - Alineamiento con margin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./modos-escritura.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">Inicio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="py-4">
+          <h1 class="mb-4">
+            Modos de escritura y ejes de alineamiento
+          </h1>
+          <div class="row">
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">HORIZONTAL TB (LTR)</div>
+                <div class="card-body">
+                  <pre><code>direction: ltr;
+writing-mode: horizontal-tb;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">HORIZONTAL TB (RTL)</div>
+                <div class="card-body">
+                  <pre><code>direction: ltr;
+writing-mode: horizontal-tb;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">VERTICAL LR (LTR)</div>
+                <div class="card-body">
+                  <pre><code>direction: ltr;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">VERTICAL LR (RTL)</div>
+                <div class="card-body">
+                  <pre><code>direction: rtl;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">VERTICAL LR (LTR)</div>
+                <div class="card-body">
+                  <pre><code>direction: ltr;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">VERTICAL LR (RTL)</div>
+                <div class="card-body">
+                  <pre><code>direction: rtl;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">SIDEWAYS LR (LTR)</div>
+                <div class="card-body">
+                  <pre><code>direction: ltr;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">SIDEWAYS LR (RTL)</div>
+                <div class="card-body">
+                  <pre><code>direction: rtl;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">SIDEWAYS RL (LTR)</div>
+                <div class="card-body">
+                  <pre><code>direction: ltr;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 border p-4 box">
+              <div class="card">
+                <div class="card-header">SIDEWAYS RL (RTL)</div>
+                <div class="card-body">
+                  <pre><code>direction: rtl;
+writing-mode: vertical-lr;</code></pre>
+                </div>
+                <div class="card-footer">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                  libero id aliquam assumenda sint quod reiciendis natus minima
+                  numquam ipsum!
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

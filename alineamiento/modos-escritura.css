@@ -1,0 +1,53 @@
+.box:nth-of-type(1) {
+  direction: ltr;
+  writing-mode: horizontal-tb;
+}
+
+.box:nth-of-type(2) {
+  direction: rtl;
+  writing-mode: horizontal-tb;
+}
+
+.box:nth-of-type(3) {
+  direction: ltr;
+  writing-mode: vertical-lr;
+  max-height: 300px;
+}
+
+.box:nth-of-type(4) {
+  direction: rtl;
+  writing-mode: vertical-lr;
+  max-height: 300px;
+}
+
+.box:nth-of-type(5) {
+  direction: ltr;
+  writing-mode: vertical-rl;
+  max-height: 300px;
+}
+
+.box:nth-of-type(6) {
+  direction: rtl;
+  writing-mode: vertical-rl;
+  max-height: 300px;
+}
+
+.box:nth-of-type(7) {
+  direction: ltr;
+  writing-mode: sideways-lr;
+}
+
+.box:nth-of-type(8) {
+  direction: rtl;
+  writing-mode: sideways-lr;
+}
+
+.box:nth-of-type(9) {
+  direction: ltr;
+  writing-mode: sideways-rl;
+}
+
+.box:nth-of-type(10) {
+  direction: rtl;
+  writing-mode: sideways-rl;
+}
