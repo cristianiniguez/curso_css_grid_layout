@@ -1,0 +1,45 @@
+:root {
+  --box-size: 180px;
+  --element-size: 60px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  height: var(--box-size);
+  display: flex;
+}
+
+.element {
+  width: var(--element-size);
+  height: var(--element-size);
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+  justify-content: flex-start;
+}
+.box:nth-child(4),
+.box:nth-child(5),
+.box:nth-child(6) {
+  justify-content: center;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+  justify-content: flex-end;
+}
+
+.box:nth-child(3n + 1) {
+  align-items: flex-start;
+}
+.box:nth-child(3n + 2) {
+  align-items: center;
+}
+.box:nth-child(3n + 3) {
+  align-items: flex-end;
+}

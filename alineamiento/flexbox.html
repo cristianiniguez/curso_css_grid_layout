@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso de CSS Grid Layout - Alineamiento con flexbox</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./flexbox.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">Inicio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="py-4">
+          <h1 class="mb-4">
+            Técnicas de Alineamiento antes de CSS Grid - Flexbox
+          </h1>
+          <div class="row">
+            <div class="col-xl-6">
+              <div class="wrapper">
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Top Left
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Center Left
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Bottom Left
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Top Center
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Center Center
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Bottom Center
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Top Right
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Center Right
+                  </div>
+                </div>
+                <div class="bg-light border box">
+                  <div
+                    class="bg-secondary text-center text-white d-flex justify-content-center align-items-center element"
+                  >
+                    Bottom Right
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <pre><code>
+:root {
+  --box-size: 180px;
+  --element-size: 60px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  height: var(--box-size);
+  display: flex;
+}
+
+.element {
+  width: var(--element-size);
+  height: var(--element-size);
+}
+
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3) {
+  justify-content: flex-start;
+}
+.box:nth-child(4),
+.box:nth-child(5),
+.box:nth-child(6) {
+  justify-content: center;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+  justify-content: flex-end;
+}
+
+.box:nth-child(3n + 1) {
+  align-items: flex-start;
+}
+.box:nth-child(3n + 2) {
+  align-items: center;
+}
+.box:nth-child(3n + 3) {
+  align-items: flex-end;
+}                                                   
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
