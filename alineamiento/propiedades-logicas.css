@@ -1,0 +1,18 @@
+.box {
+  /* border-width: 1px; */
+  border-style: dashed;
+  border-top-color: red;
+  border-block-start-width: 10px;
+}
+
+.box1 {
+  writing-mode: horizontal-tb;
+}
+
+.box2 {
+  writing-mode: vertical-lr;
+}
+
+.box3 {
+  writing-mode: vertical-rl;
+}
