@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso de CSS Grid Layout - Dibujemos con CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./dibujo.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">Inicio</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="py-4">
+          <h1 class="mb-4">
+            Dibujemos con CSS
+          </h1>
+          <div class="row">
+            <div
+              class="col-xl-6 border p-4 d-flex justify-content-center align-items-center"
+            >
+              <div class="draw">
+                <div class="blade-container">
+                  <div class="blade"></div>
+                </div>
+                <div class="rod-container">
+                  <div class="rod"></div>
+                </div>
+                <div class="handle-container">
+                  <div class="handle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <pre><code>
+:root {
+  --green: #364e5a;
+  --silver: #d9dbec;
+  --gold: #fec93d;
+  --orange: #f78f1e;
+  --white: #fff;
+}
+
+.draw {
+  width: 256px;
+  height: 384px;
+  background: var(--green);
+  position: relative;
+}
+
+.blade-container {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.blade {
+  width: 64px;
+  height: 128px;
+  background: var(--silver);
+  position: relative;
+}
+
+.blade::before {
+  content: "";
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 32px solid var(--silver);
+  position: absolute;
+  bottom: 100%;
+}
+
+.handle-container {
+  position: absolute;
+  top: 192px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.handle {
+  background: var(--gold);
+  width: 128px;
+  height: 32px;
+  position: relative;
+}
+
+.handle::before,
+.handle::after {
+  content: "";
+  background: var(--orange);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 0 24px var(--gold);
+}
+
+.handle::before {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.handle::after {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.rod-container {
+  position: absolute;
+  top: 222px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rod {
+  width: 64px;
+  height: 96px;
+  background: var(--gold);
+  border-radius: 0 0 32px 32px;
+  position: relative;
+}
+.rod::after {
+  content: "";
+  width: 32px;
+  height: 80px;
+  border-radius: 0 0 16px 16px;
+  background: var(--orange);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}                                             
+              </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

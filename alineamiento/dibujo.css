@@ -1,0 +1,98 @@
+:root {
+  --green: #364e5a;
+  --silver: #d9dbec;
+  --gold: #fec93d;
+  --orange: #f78f1e;
+  --white: #fff;
+}
+
+.draw {
+  width: 256px;
+  height: 384px;
+  background: var(--green);
+  position: relative;
+}
+
+.blade-container {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.blade {
+  width: 64px;
+  height: 128px;
+  background: var(--silver);
+  position: relative;
+}
+
+.blade::before {
+  content: "";
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 32px solid var(--silver);
+  position: absolute;
+  bottom: 100%;
+}
+
+.handle-container {
+  position: absolute;
+  top: 192px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.handle {
+  background: var(--gold);
+  width: 128px;
+  height: 32px;
+  position: relative;
+}
+
+.handle::before,
+.handle::after {
+  content: "";
+  background: var(--orange);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 0 24px var(--gold);
+}
+
+.handle::before {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.handle::after {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.rod-container {
+  position: absolute;
+  top: 222px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rod {
+  width: 64px;
+  height: 96px;
+  background: var(--gold);
+  border-radius: 0 0 32px 32px;
+  position: relative;
+}
+.rod::after {
+  content: "";
+  width: 32px;
+  height: 80px;
+  border-radius: 0 0 16px 16px;
+  background: var(--orange);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
