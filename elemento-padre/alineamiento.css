@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template: repeat(3, 50px) / repeat(3, 50px);
+  height: 250px;
+}
+
+.grid-1 {
+  justify-content: space-around;
+}
+.grid-2 {
+  justify-content: space-between;
+}
+.grid-3 {
+  justify-content: space-evenly;
+}
+
+.grid-4 {
+  align-content: space-around;
+}
+.grid-5 {
+  align-content: space-between;
+}
+.grid-6 {
+  align-content: space-evenly;
+}

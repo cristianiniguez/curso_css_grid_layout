@@ -32,14 +32,14 @@
         <div class="py-4">
           <h1 class="mb-4">Curso de CSS Grid Layout</h1>
           <h2 class="mb-4">Control de alineamiento</h2>
-          <div class="accordion" id="accordionExample">
+          <div class="mb-4 accordion" id="accordion1">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button
                   class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
+                  data-bs-target="#accordion1 #collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
                 >
@@ -50,7 +50,6 @@
                 id="collapseOne"
                 class="accordion-collapse collapse show"
                 aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
                   <ul>
@@ -94,7 +93,7 @@
                   class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
+                  data-bs-target="#accordion1 #collapseTwo"
                   aria-expanded="true"
                   aria-controls="collapseTwo"
                 >
@@ -103,9 +102,8 @@
               </h2>
               <div
                 id="collapseTwo"
-                class="accordion-collapse collapse"
+                class="accordion-collapse collapse show"
                 aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body">
                   <ul>
@@ -124,6 +122,39 @@
                     <li>
                       Dibujemos con CSS
                       <a href="/alineamiento/dibujo.html">
+                        <i class="fas fa-link"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 class="mb-4">Propiedades y valores para el elemento padre</h2>
+          <div class="mb-4 accordion" id="accordion2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#accordion2 #collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Quiz's
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+              >
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      Alineamiento en el elemento contenedor
+                      <a href="/elemento-padre/alineamiento.html">
                         <i class="fas fa-link"></i>
                       </a>
                     </li>
