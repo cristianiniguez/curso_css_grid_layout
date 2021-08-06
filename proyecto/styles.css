@@ -1,0 +1,68 @@
+:root {
+  --red: #eb5757;
+  --green: #219653;
+  --blue: #2f80ed;
+  --yellow: #f2c94c;
+  --light-gray: #eee;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 5fr 1fr 5fr;
+  grid-template-rows: 1fr 96px 1fr;
+
+  background-image: url("./img/graphs.svg");
+  background-size: cover;
+}
+
+.arrow-v {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+}
+
+.arrow-h {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
+
+.box {
+  display: grid;
+  grid-template: repeat(3, 96px) / repeat(5, 1fr);
+}
+
+.box-1 .square:nth-child(2n),
+.box-2 .square:nth-child(2n + 1),
+.box-3 .square:nth-child(2n + 1),
+.box-4 .square:nth-child(2n) {
+  background-color: var(--light-gray);
+}
+
+.square-red {
+  background-color: var(--red) !important;
+}
+.square-green {
+  background-color: var(--green) !important;
+}
+.square-blue {
+  background-color: var(--blue) !important;
+}
+.square-yellow {
+  background-color: var(--yellow) !important;
+}
+
+.square img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.line {
+  stroke: #eb5757;
+  stroke-width: 2px;
+  stroke-linecap: round;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
